@@ -1,0 +1,16 @@
+{
+  "name": "typescript-action",
+  "version": "1.0.0",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js"
+  },
+  "dependencies": {
+    "node-fetch": "^2.7.0"
+  },
+  "devDependencies": {
+    "@types/node-fetch": "^2.6.11",
+    "typescript": "^5.0.4"
+  }
+}
