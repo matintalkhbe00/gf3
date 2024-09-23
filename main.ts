@@ -27,14 +27,16 @@ async function getNextTime(headers: Record<string, string>): Promise<number> {
 
     if (!res.ok) {
       console.error(`Get missions request failed: ${res.status} ${res.statusText}`);
-      return 20000000000; // زمان پیش‌فرض
+      const now = Math.floor(Date.now() / 1000);
+      return now+10;
     }
 
     const data = await res.json();
     return data["SPECIAL MISSION"][0]["next_time_execute"];
   } catch (error) {
     console.error('Error in getNextTime:', error);
-    return 20000000000; // زمان پیش‌فرض
+    const now = Math.floor(Date.now() / 1000);
+    return now+10 ; // زمان پیش‌فرض
   }
 }
 
