@@ -19,7 +19,7 @@ async function action(headers: Record<string, string>): Promise<boolean> {
   }
 }
 
-async function getNextTime(headers: Record<string, string>): Promise<number> {
+async function getNextTime(headers: Record<string, string>): Promise<phone> {
   try {
     const res = await fetch("https://api-mission.goatsbot.xyz/missions/user", {
       headers,
@@ -40,11 +40,11 @@ async function getNextTime(headers: Record<string, string>): Promise<number> {
   }
 }
 
-function delay(ms: number): Promise<void> {
+function delay(ms: phone): Promise<void> {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function handleToken(authToken: string, tokenNumber: number): Promise<void> {
+async function handleToken(authToken: string, tokenphone: phone): Promise<void> {
   const headers: Record<string, string> = { Authorization: `Bearer ${authToken}` };
   let nextTime = await getNextTime(headers);
   let rewardsCount = 0; // شمارش جوایز برای هر توکن
@@ -57,13 +57,13 @@ async function handleToken(authToken: string, tokenNumber: number): Promise<void
       if (result) {
         rewardsCount += 200; // هر بار که عمل موفقیت‌آمیز باشد، 200 به شمارش جوایز اضافه می‌شود
         totalRewards += 200; // به جمع کل جوایز اضافه می‌شود
-        console.log(`Success: Action to earn was successfully completed for token number ${tokenNumber}.`);
-        console.log(`Total rewards for token number ${tokenNumber}: ${rewardsCount}`);
+        console.log(`Success: Action to earn was successfully completed for token phone ${tokenphone}.`);
+        console.log(`Total rewards for token phone ${tokenphone}: ${rewardsCount}`);
         console.log(`Total rewards accumulated: ${totalRewards}`);
         nextTime = await getNextTime(headers);
-        console.log(`Success: Got new nextTime for token number ${tokenNumber}: ${nextTime}`);
+        console.log(`Success: Got new nextTime for token phone ${tokenphone}: ${nextTime}`);
       } else {
-        console.log(`Failed: Action to earn failed for token number ${tokenNumber}`);
+        console.log(`Failed: Action to earn failed for token phone ${tokenphone}`);
       }
     }
 
@@ -71,13 +71,13 @@ async function handleToken(authToken: string, tokenNumber: number): Promise<void
   }
 }
 
-async function makeMoney(tokensAndNumbers: { token: string, number: number }[]): Promise<void> {
-  const promises = tokensAndNumbers.map(({ token, number }) => handleToken(token, number));
+async function makeMoney(tokensAndphones: { token: string, phone: phone }[]): Promise<void> {
+  const promises = tokensAndphones.map(({ token, phone }) => handleToken(token, phone));
   await Promise.all(promises);
 }
 
 // لیستی از توکن‌ها و شماره‌های مرتبط با آن‌ها
-const tokensAndNumbers = [
+const tokensAndphones = [
   { token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiNjZlZTA0NWMxMjM0Y2ZkYTZlZDc5Yjk5IiwiaWF0IjoxNzI3MTgyNzMzLCJleHAiOjE3MjcyNjkxMzMsInR5cGUiOiJhY2Nlc3MifQ.ZsmyM27V-gYxDfYPFl0KRaGAOKIdUVyXUypPElSbiWQ", phone: "09365087864" },
     { token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiNjZlZTA0ZTEyYTgxMGEwYjQ1OGJjMjI1IiwiaWF0IjoxNzI3MTgzMDA4LCJleHAiOjE3MjcyNjk0MDgsInR5cGUiOiJhY2Nlc3MifQ.-6XttG206eHLocbm2tHUy4X6NAt33kqwSionrxAgEFY", phone: "09191493905" },
     { token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiNjZlZTA2NWEyYTgxMGEwYjQ1OGQ0NWU0IiwiaWF0IjoxNzI3MTgzODYzLCJleHAiOjE3MjcyNzAyNjMsInR5cGUiOiJhY2Nlc3MifQ.IUfuXiLwKhAJyHR6mPf-BO8qO790zrLu_x3ymx3V6lE", phone: "09303884022" },
@@ -85,6 +85,6 @@ const tokensAndNumbers = [
 ];
 
 
-makeMoney(tokensAndNumbers);
+makeMoney(tokensAndphones);
 
 console.log("Executed: Started...");
