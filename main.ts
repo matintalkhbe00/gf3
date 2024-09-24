@@ -78,11 +78,10 @@ async function makeMoney(tokensAndNumbers: { token: string, number: number }[]):
 
 // لیستی از توکن‌ها و شماره‌های مرتبط با آن‌ها
 const tokensAndNumbers = [
-  { token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiNjZlZTA0NWMxMjM0Y2ZkYTZlZDc5Yjk5IiwiaWF0IjoxNzI3MDg4NzE0LCJleHAiOjE3MjcxNzUxMTQsInR5cGUiOiJhY2Nlc3MifQ.WgIGaO-qv8SdXjHXLacKHvdZfF8yAHCOzsH3hma245Q", number: 9 },
-  { token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiNjZlZTA0ZTEyYTgxMGEwYjQ1OGJjMjI1IiwiaWF0IjoxNzI3MDkwODIxLCJleHAiOjE3MjcxNzcyMjEsInR5cGUiOiJhY2Nlc3MifQ.bizmIi8leHAQI7IkuHbMTsb4aRF9PiPC25esCDjIubk", number: 10 },
-  { token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiNjZlZTA2NWEyYTgxMGEwYjQ1OGQ0NWU0IiwiaWF0IjoxNzI3MDkxMTMyLCJleHAiOjE3MjcxNzc1MzIsInR5cGUiOiJhY2Nlc3MifQ.EOf6Xs3NzLFr4an8jfpoZaaYIipR01r4KIzV8FROIpM", number: 11 },
-  { token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiNjZlZjQzNTc1MDIzMDkwNjNkODc4YzRhIiwiaWF0IjoxNzI3MDkxMzg2LCJleHAiOjE3MjcxNzc3ODYsInR5cGUiOiJhY2Nlc3MifQ.cvwvcxBhjINWq60gptGGRqIBjoUTeYfUAEATHWq-_5g", number: 12 },
-  { token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiNjZlZjQ0MmU1MDIzMDkwNjNkODkwNzJmIiwiaWF0IjoxNzI3MDkxNTc0LCJleHAiOjE3MjcxNzc5NzQsInR5cGUiOiJhY2Nlc3MifQ.Uj17uaarYLo6j1buP5FtoeHzBkuv5XYrtFTQFfmuemo", number: 13 }
+  { token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiNjZlZTA0NWMxMjM0Y2ZkYTZlZDc5Yjk5IiwiaWF0IjoxNzI3MTgyNzMzLCJleHAiOjE3MjcyNjkxMzMsInR5cGUiOiJhY2Nlc3MifQ.ZsmyM27V-gYxDfYPFl0KRaGAOKIdUVyXUypPElSbiWQ", phone: "09365087864" },
+    { token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiNjZlZTA0ZTEyYTgxMGEwYjQ1OGJjMjI1IiwiaWF0IjoxNzI3MTgzMDA4LCJleHAiOjE3MjcyNjk0MDgsInR5cGUiOiJhY2Nlc3MifQ.-6XttG206eHLocbm2tHUy4X6NAt33kqwSionrxAgEFY", phone: "09191493905" },
+    { token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiNjZlZTA2NWEyYTgxMGEwYjQ1OGQ0NWU0IiwiaWF0IjoxNzI3MTgzODYzLCJleHAiOjE3MjcyNzAyNjMsInR5cGUiOiJhY2Nlc3MifQ.IUfuXiLwKhAJyHR6mPf-BO8qO790zrLu_x3ymx3V6lE", phone: "09303884022" },
+    { token: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiNjZlZjQzNTc1MDIzMDkwNjNkODc4YzRhIiwiaWF0IjoxNzI3MTg0MDEzLCJleHAiOjE3MjcyNzA0MTMsInR5cGUiOiJhY2Nlc3MifQ.UjUWLimXO11o48Tqxva5ygcbJb-Ldi_5nJCycFACPIo", phone: "09025967865" },
 ];
 
 
